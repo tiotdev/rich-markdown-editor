@@ -4,13 +4,10 @@ import styled, { withTheme } from "styled-components";
 import { Editor } from "slate-react";
 import {
   BoldIcon,
-  CodeIcon,
   Heading1Icon,
   Heading2Icon,
   ItalicIcon,
-  BlockQuoteIcon,
   LinkIcon,
-  StrikethroughIcon,
 } from "outline-icons";
 import type { Theme, Mark, Block } from "../../types";
 import ToolbarButton from "./ToolbarButton";
@@ -130,12 +127,9 @@ class FormattingToolbar extends React.Component<Props> {
       <span>
         {this.renderMarkButton("bold", BoldIcon)}
         {this.renderMarkButton("italic", ItalicIcon)}
-        {this.renderMarkButton("deleted", StrikethroughIcon)}
-        {this.renderMarkButton("code", CodeIcon)}
         <Separator />
         {this.renderBlockButton("heading2", Heading1Icon)}
         {this.renderBlockButton("heading3", Heading2Icon)}
-        {this.renderBlockButton("block-quote", BlockQuoteIcon)}
         <Separator />
         <ToolbarButton onMouseDown={this.handleCreateLink}>
           <LinkIcon color={this.props.theme.toolbarItem} />
