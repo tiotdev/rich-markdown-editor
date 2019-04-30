@@ -18,6 +18,7 @@ import getDataTransferFiles from "../../lib/getDataTransferFiles";
 import type { SlateNodeProps, Theme } from "../../types";
 import EditList from "../../plugins/EditList";
 import ToolbarButton from "./ToolbarButton";
+import LocationPicker from "./LocationPicker";
 
 const { changes } = EditList;
 
@@ -47,16 +48,15 @@ class BlockToolbar extends React.Component<Props> {
   }
 
   handleOutsideMouseClick = (ev: SyntheticMouseEvent<*>) => {
-    const element = findDOMNode(this.bar);
-
-    if (
-      !element ||
-      (ev.target instanceof Node && element.contains(ev.target)) ||
-      (ev.button && ev.button !== 0)
-    ) {
-      return;
-    }
-    this.removeSelf(ev);
+    // const element = findDOMNode(this.bar);
+    // if (
+    //   !element ||
+    //   (ev.target instanceof Node && element.contains(ev.target)) ||
+    //   (ev.button && ev.button !== 0)
+    // ) {
+    //   return;
+    // }
+    // this.removeSelf(ev);
   };
 
   @keydown("esc")
@@ -67,7 +67,7 @@ class BlockToolbar extends React.Component<Props> {
     this.props.editor.setNodeByKey(this.props.node.key, {
       type: "paragraph",
       text: "",
-      isVoid: false,
+      isVoid: false
     });
   }
 
@@ -177,17 +177,14 @@ class BlockToolbar extends React.Component<Props> {
           onChange={this.onImagePicked}
           accept="image/*"
         />
-        {this.renderBlockButton("heading1", Heading1Icon)}
-        {this.renderBlockButton("heading2", Heading2Icon)}
-        <Separator />
         {this.renderBlockButton("bulleted-list", BulletedListIcon)}
         {this.renderBlockButton("ordered-list", OrderedListIcon)}
-        {this.renderBlockButton("todo-list", TodoListIcon)}
         <Separator />
         {this.renderBlockButton("block-quote", BlockQuoteIcon)}
-        {this.renderBlockButton("code", CodeIcon)}
         {this.renderBlockButton("horizontal-rule", HorizontalRuleIcon)}
+        <Separator />
         {hasImageUpload && this.renderBlockButton("image", ImageIcon)}
+        <LocationPicker />
       </Bar>
     );
   }
