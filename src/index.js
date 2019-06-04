@@ -17,7 +17,7 @@ import queries from "./queries";
 export const theme = lightTheme;
 export const schema = defaultSchema;
 
-const defaultOptions = { normalize: false };
+const defaultOptions = {};
 
 export type Props = {
   id?: string,
@@ -371,23 +371,6 @@ const StyledEditor = styled(Editor)`
     margin: 0;
     padding-left: 10px;
     font-style: italic;
-  }
-
-  table {
-    border-collapse: collapse;
-  }
-
-  tr {
-    border-bottom: 1px solid #eee;
-  }
-
-  th {
-    font-weight: bold;
-  }
-
-  th,
-  td {
-    padding: 5px 20px 5px 0;
   }
 
   b,
