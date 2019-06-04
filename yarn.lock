@@ -110,6 +110,11 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@domoinc/slate-edit-table@^0.22.2":
+  version "0.22.2"
+  resolved "https://registry.yarnpkg.com/@domoinc/slate-edit-table/-/slate-edit-table-0.22.2.tgz#67450c1915eeae37d2a4055755c9a12f70f3306c"
+  integrity sha512-qGjOq/+R8jaQFCpJ2WM/71r+5LIenXMImgMc0st6Isg8W4OGFomj5uMNDaKuznBgPfbtV8/zzvLwjuGba5faSA==
+
 "@emotion/is-prop-valid@^0.7.3":
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.7.3.tgz#a6bf4fa5387cbba59d44e698a4680f481a8da6cc"
@@ -4822,10 +4827,10 @@ osenv@^0.1.4:
     os-homedir "^1.0.0"
     os-tmpdir "^1.0.0"
 
-outline-icons@^1.6.0:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/outline-icons/-/outline-icons-1.8.0.tgz#e2ebdc6e69db5a79ca3dfdd60b533bbeb8edf1ef"
-  integrity sha512-+A/xE3QLBfwpEYy9OaKmwDpzcIVIa5/S9eGG6N0uNW+qiHZBqhOEcpnO2RasVUjvFZDpyAFiHSqy03Yb8oBjmA==
+outline-icons@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/outline-icons/-/outline-icons-1.9.0.tgz#e17d998272209846aa3277ad7ed7063fc4dae984"
+  integrity sha512-Uzh1aP9Js+9ieOrvZpyPjFOaVBjpC+OFzF1pRi5jemYpH6kiA236i7itv0OdLX6KFDpybP6b6OWrCVDle5RXLQ==
 
 output-file-sync@^1.1.2:
   version "1.1.2"
@@ -5802,10 +5807,10 @@ slate-hotkeys@^0.2.9:
     is-hotkey "0.1.4"
     slate-dev-environment "^0.2.2"
 
-slate-md-serializer@^5.3.2:
-  version "5.3.2"
-  resolved "https://registry.yarnpkg.com/slate-md-serializer/-/slate-md-serializer-5.3.2.tgz#443695e0e4555916be97762699d9ba31adbbae94"
-  integrity sha512-K6FWS5VM2J7BUEwUxZA5o6KsTC9BaXhbZemIj9Gn9mMOiDX5j64CcidYq+QuTUuRWeIfako5iRiyuWU/VOxP5w==
+slate-md-serializer@^5.4.0-5:
+  version "5.4.0-5"
+  resolved "https://registry.yarnpkg.com/slate-md-serializer/-/slate-md-serializer-5.4.0-5.tgz#52d5324dbc3112743e741a7465b3531863e3fe3f"
+  integrity sha512-9mrijYXULUrTyIw/SIHghjB9JiLT2Gjuds7PCA08AqJ3pWG30U9axMMMg+mJKv72INIqdg07mts4Z83//53doQ==
   dependencies:
     hashtag-regex "^2.0.0"
 
@@ -5859,9 +5864,9 @@ slate-schema-violations@^0.1.39:
   integrity sha512-SNRoV9Ii5UqjNqAKcIw7aAOMwgI45zsn86ue2n8NVLNOCe3fUI35cjq6l3fdvmRYw4X/GcZqzhpQsizHD3ts6A==
 
 slate@^0.45.0:
-  version "0.45.0"
-  resolved "https://registry.yarnpkg.com/slate/-/slate-0.45.0.tgz#2fec8151c2d311ff475cb1ff655c76827b2bf0e0"
-  integrity sha512-1bkfI0Ir5uPTCfHxYTPT/bwA9pkWPmeBk3P6xCB0bukjSnjBf5PryuCee5tDUeachOR8bdicc0DPWN7RPORvhg==
+  version "0.45.1"
+  resolved "https://registry.yarnpkg.com/slate/-/slate-0.45.1.tgz#6c6bfc9d0d54844e6d2541bcd6a840ec47bb78a1"
+  integrity sha512-kEavVrC9lhIu6SX6Xy7GUpHsjfCcr+RQXKJ2X5v1NEdHsqIf0CCHChAarkEp65QK9qx7oRDti/KWOdnYMsXc7Q==
   dependencies:
     debug "^3.1.0"
     direction "^0.1.5"

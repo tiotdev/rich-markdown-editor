@@ -3,6 +3,7 @@ import { Node, Editor } from "slate";
 import TrailingBlock from "@wikifactory/slate-trailing-block";
 import EditCode from "@wikifactory/slate-edit-code";
 import EditBlockquote from "@wikifactory/slate-edit-blockquote";
+import EditTable from "@domoinc/slate-edit-table";
 import InsertImages from "slate-drop-or-paste-images";
 import PasteLinkify from "slate-paste-linkify";
 import CollapseOnEscape from "slate-collapse-on-escape";
@@ -17,6 +18,7 @@ import MarkdownPaste from "./plugins/MarkdownPaste";
 import Ellipsis from "./plugins/Ellipsis";
 import Embeds from "./plugins/Embeds";
 import Chrome from "./plugins/Chrome";
+import Table from "./plugins/Table";
 import Nodes from "./nodes.js";
 import Marks from "./marks.js";
 
@@ -24,9 +26,11 @@ import Marks from "./marks.js";
 import "prismjs/components/prism-ruby";
 import "prismjs/components/prism-typescript";
 import "prismjs/components/prism-csharp";
+import "prismjs/components/prism-powershell";
 import "prismjs/components/prism-php";
 import "prismjs/components/prism-python";
 import "prismjs/components/prism-java";
+import "prismjs/components/prism-bash";
 
 const createPlugins = ({ placeholder, getLinkComponent }: *) => {
   return [
@@ -62,6 +66,13 @@ const createPlugins = ({ placeholder, getLinkComponent }: *) => {
       type: "block-quote",
       typeDefault: "paragraph",
     }),
+    EditTable({
+      typeTable: "table",
+      typeRow: "table-row",
+      typeCell: "table-cell",
+      typeContent: "paragraph",
+    }),
+    Table(),
     Prism({
       onlyIn: node => node.type === "code",
       getSyntax: node => node.data.get("language") || "javascript",
